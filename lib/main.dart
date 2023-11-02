@@ -1,57 +1,60 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/model/constant.dart';
+import 'package:flutterapp/model/sidebar.dart';
+
+import 'component/sidebar_row.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
-
-class  MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // Create an instance of SidebarItem
+
     return MaterialApp(
-    home:Scaffold(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: sidebarscreen(),
+      ),
+    );
+  }
+}
 
-    body:Center(
+class sidebarscreen extends StatelessWidget {
 
-      child:Row(
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color:ksidebargroundcolor,
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(34.0),
+
+        ),
+      ),
+      height:MediaQuery.of(context).size.height,
+      width: MediaQuery.of(context).size.width*0.85,
+      padding:EdgeInsets.symmetric(
+        vertical:20,
+        horizontal: 25,
+      ),
+      child: Column(
+
         children: [
-                Container(
-                 width:42,
-          height:42,
-              padding: EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                    gradient:LinearGradient(
-                        begin:Alignment.topLeft,
-                      end:Alignment.topRight,
-                      colors:[
-                        Color(0xff00AEFF),
-                        Color(0xFF0076FF),
-                      ]
-                    )
-              ),
-              child: Icon(Icons.home,
-                  color:Colors.white),
-                ),
-          SizedBox(width:10),
-          Container(
-
-            child:Text("Home",style: TextStyle(fontSize: 16,
-              fontWeight:FontWeight.w800,
-                color:Color(0xFF242629),
-
-            ),
+          CircleAvatar(
+            backgroundImage:AssetImage('asset/image/about.png'),
+            radius: 20.0,
+          ),
+          Center(
+            child: SidebarRow(item: sidebarItems[2],
             ),
           ),
         ],
       ),
-
-    )
-    ),
-
-
-
-);
-}
+    );
+  }
 }
 
