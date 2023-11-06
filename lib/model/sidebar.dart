@@ -24,33 +24,48 @@ var sidebarItems = [
     ),
   ),
   SidebarItem(
-    title: "Another Item",
+    title: "Courses",
     background: LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.topRight,
       colors: [
-        Color(0xff00AEFF),
-        Color(0xFF0076FF),
+        Color(0xFFFF7043),
+        Color(0xFFFF7043),
       ],
     ),
     icon: Icon(
-      Icons.star,
-      color: Colors.yellow,
+      Icons.book_outlined,
+      color: Colors.white,
     ),
   ),
   SidebarItem(
-    title: "Yet Another Item",
+    title: "Billing",
     background: LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.topRight,
       colors: [
-        Color(0xff00AEFF),
+        Color(0xFFFFEB3B),
+        Color(0xFFFFEB3B),
+      ],
+    ),
+    icon: Icon(
+      Icons.add_card,
+      color: Colors.white,
+    ),
+  ),
+  SidebarItem(
+    title: "Setting",
+    background: LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.topRight,
+      colors: [
+        Color(0xFF40C4FF),
         Color(0xFF0076FF),
       ],
     ),
     icon: Icon(
-      Icons.access_alarm,
-      color: Colors.red,
+      Icons.settings,
+      color: Colors.white,
     ),
   ),
 ];
