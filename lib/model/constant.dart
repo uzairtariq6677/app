@@ -24,7 +24,7 @@ var kLargeTittleStyle=TextStyle(
 );
 var kTittleStyle=TextStyle(
     fontSize: 22.0,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.normal,
     color:kprimarylabelcolor,
     fontFamily: Platform.isIOS? 'SF pro TEXt':null,
     decoration: TextDecoration.none
@@ -58,3 +58,15 @@ var kCardtittlelineStyle=TextStyle(
     decoration: TextDecoration.none
 );
 
+var kSearchPlaceholderStyle = TextStyle(
+  fontSize: 13.0,
+  color: ksecondaylabelcolour,
+  fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
+  decoration: TextDecoration.none,
+);
+var ksearchplaceholderstyle = TextStyle(
+  fontSize: 13.0,
+  color: kprimarylabelcolor,
+  fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
+  decoration: TextDecoration.none,
+);
