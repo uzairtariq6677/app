@@ -3,7 +3,11 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterapp/card/Complete-courses-card.dart';
+import 'package:flutterapp/component/Certificate_Viewer.dart';
+import 'package:flutterapp/component/list/Completed-course-List.dart';
 import 'package:flutterapp/model/constant.dart';
+import 'package:flutterapp/model/course.dart';
 
 class profile_screen extends StatelessWidget {
 
@@ -196,6 +200,62 @@ final List<String>Badges=[
 
               ),
         ),
+              Padding(
+                padding:EdgeInsets.only(
+                    left:20,
+                top:32,
+                bottom:12,
+                right:20,
+                ),
+                child:Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("certificate", style:kTitleHeadlineStyle),
+                          Row(
+                            children: [
+                              Text("see all",style: kTitleHeadlineStyle,),
+                              Icon(Icons.chevron_right,color:ksecondaylabelcolour),
+
+                            ],
+                          ),
+                        ],
+                    )
+                  ],
+                )
+
+              ),
+              CertificateViewer(),
+              Padding(
+                  padding:EdgeInsets.only(
+                    left:20,
+
+                    bottom:12,
+                    right:20,
+                  ),
+                  child:Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("Completed Courses", style:kTitleHeadlineStyle),
+                          Row(
+                            children: [
+                              Text("see all",style: kTitleHeadlineStyle,),
+                              Icon(Icons.chevron_right,color:ksecondaylabelcolour),
+
+                            ],
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+
+              ),
+              CompletedCourseList(
+              ),
+SizedBox(height: 28.0),
           ],
         ),
     ),
